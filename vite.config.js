@@ -5,4 +5,7 @@ export default defineConfig({
   root: './src',
   base: './',
   plugins: [posthtml()],
+  css: {
+    hot: true,
+  },
 });

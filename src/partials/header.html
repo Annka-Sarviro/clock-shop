@@ -1,3 +1,84 @@
-<header class="header">
-  <div class="container container__header">Header</div>
+<header>
+  <div class="header__upper">
+    <div class="container container__header">
+      <ul class="header__list">
+        <li class="header__item header__item-tel">
+          <a href="tel:+88121234567"> 8 (812) 123-45-67</a>
+        </li>
+        <li class="header__item">Працюємо 7 днів на тиждень</li>
+        <li class="header__item">
+          <time> 9:00 — 18:00</time>
+        </li>
+      </ul>
+      <ul class="header__list header__list-login">
+        <li><a href="#">Вхід&nbsp;/&nbsp;</a></li>
+        <li><a href="#">Реєстрація</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="header">
+    <div class="container container__header">
+      <include src="./partials/logo.html"></include>
+      <div class="header__nav-wrapper">
+        <include src="./partials/nav.html"></include>
+        <ul class="header__nav">
+          <li>
+            <button type="button" aria-label="кнопка відкриття корзини" class="header__button">
+              <img src="../images/cart.svg" alt="" class="" width="22" height="22" />
+            </button>
+          </li>
+          <li>
+            <button type="button" aria-label="кнопка відкриття пошуку" class="header__button">
+              <img src="../images/search.svg" alt="" class="" width="22" height="22" />
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="header--mobile">
+    <div class="container container__header container__header--mobile">
+      <include src="./partials/logo.html"></include>
+
+      <button type="button" id="modal-open-btn" class="close-button">
+        <img src="../images/line.svg" alt="" width="36" height="2" class="close-button-icon" />
+        <img src="../images/line.svg" alt="" width="36" height="2" class="close-button-icon" />
+        <img src="../images/line.svg" alt="" width="36" height="2" class="close-button-icon" />
+      </button>
+      <button type="button" id="modal-close-btn" class="close-button visually-hidden">
+        <img src="../images/line.svg" alt="" width="36" height="2" class="close-button-icon" />
+        <img src="../images/line.svg" alt="" width="36" height="2" class="close-button-icon" />
+      </button>
+    </div>
+    <div class="mobile-menu visually-hidden" id="mobile-menu">
+      <include src="./partials/nav.html"></include>
+
+      <ul class="header__list header__list-login">
+        <li><a href="#">Вхід&nbsp;/&nbsp;</a></li>
+        <li><a href="#">Реєстрація</a></li>
+      </ul>
+      <ul class="header__nav">
+        <li>
+          <button type="button" class="header__button">
+            <img src="../images/cart.svg" alt="" class="" width="22" height="22" />
+            <span class="header__button-text">Корзина</span>
+          </button>
+        </li>
+        <li class="input-item">
+          <input type="text" class="header__input" placeholder="Пошук" />
+        </li>
+
+        <ul class="header__list header__list--mobile">
+          <li class="header__item header__item-tel">
+            <a href="tel:+88121234567"> 8 (812) 123-45-67</a>
+          </li>
+          <li class="header__item">Працюємо 7 днів на тиждень</li>
+          <li class="header__item">
+            <time> 9:00 — 18:00</time>
+          </li>
+        </ul>
+      </ul>
+    </div>
+  </div>
 </header>
