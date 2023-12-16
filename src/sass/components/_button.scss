@@ -1,0 +1,45 @@
+.button {
+  cursor: pointer;
+  min-width: 130px;
+  border: #fff 1px solid;
+  color: var(--white, #fff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: PT Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  padding: 12px 28px;
+
+  transition:
+    color 250ms linear,
+    background-color 250ms linear,
+    border-color 250ms linear,
+    transform 250ms linear;
+}
+
+.button--transparent {
+  background-color: transparent;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: var(--white);
+    color: var(--dark-grey);
+  }
+}
+
+.button--black {
+  background-color: transparent;
+  border-color: transparent;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: #fff 1px solid;
+  }
+}

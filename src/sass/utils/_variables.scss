@@ -1,0 +1,17 @@
+:root {
+  --black: #000000;
+  --dark-grey: #0f0f0f;
+  --grey-hover: #1f1f1f;
+  --grey: #969696;
+  --light-grey: rgba(255, 255, 255, 0.4);
+  --card-bg: #191b1c;
+
+  --white: #fff;
+}
+
+//        breakpoints
+$mobile: 320px;
+$mobile-only: 767px;
+$tablet: 768px;
+$tablet-only: 1279px;
+$desktop: 1280px;
