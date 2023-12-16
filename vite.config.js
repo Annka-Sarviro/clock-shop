@@ -1,7 +1,8 @@
+import { defineConfig } from 'vite';
 import posthtml from '@vituum/vite-plugin-posthtml';
 
-export default {
+export default defineConfig({
   root: './src',
-  // Інші налаштування Vite...
+  base: './',
   plugins: [posthtml()],
-};
+});
