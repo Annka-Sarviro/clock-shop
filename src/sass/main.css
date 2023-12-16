@@ -52,6 +52,11 @@ img {
   height: auto;
 }
 
+button {
+  background: none;
+  border: none;
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -67,10 +72,11 @@ img {
   margin: 0 auto;
   padding-right: 20px;
   padding-left: 20px;
+  width: auto;
 }
 @media screen and (min-width: 768px) {
   .container {
-    width: 320px;
+    width: 768px;
     padding-left: 32px;
     padding-right: 32px;
   }
@@ -185,4 +191,102 @@ img {
 }
 .button--black:hover, .button--black:focus, .button--black:active {
   border: #fff 1px solid;
+}
+
+.container__header {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+
+.header--upper {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  background-color: var(--black);
+}
+.header--upper .header__list {
+  color: var(--grey);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  flex-wrap: nowrap;
+}
+@media screen and (min-width: 1280px) {
+  .header--upper .header__list {
+    font-size: 12px;
+  }
+}
+.header--upper .header__item:not(:last-child) {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+.header--upper .header__item:not(:last-child)::after {
+  content: "";
+  height: 12px;
+  width: 1px;
+  background-color: var(--grey);
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.header__item-tel::before {
+  content: url("../../images/phone.svg");
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-right: 16px;
+}
+
+.header__list-login::before {
+  content: url("../../images/log-in.svg");
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  margin-right: 16px;
+}
+
+.header {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  background-color: var(--dark-grey);
+}
+
+.logo {
+  width: 104px;
+  height: auto;
+}
+
+.header__nav {
+  color: var(--gray);
+  font-size: 14px;
+  text-transform: uppercase;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  gap: 32px;
+}
+
+.header__nav-wrapper {
+  display: flex;
+  gap: 32px;
+  height: 100%;
+}
+
+.header__nav-item {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 100%;
+}
+.header__nav-item.active {
+  background-color: var(--grey-hover);
+}
+
+.header__button {
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

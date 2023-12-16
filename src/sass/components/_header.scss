@@ -1,0 +1,250 @@
+.container__header {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+
+.header__upper {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  background-color: var(--black);
+  @include media('max', 'tablet') {
+    display: none;
+  }
+}
+
+.header__list {
+  color: var(--grey);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  flex-wrap: nowrap;
+
+  @include media('min', 'tablet') {
+    font-size: 12px;
+  }
+
+  @include media('max', 'tablet') {
+    justify-content: center;
+    margin-top: 52px;
+    margin-bottom: 18px;
+  }
+}
+
+.header__upper .header__item {
+  text-transform: none;
+  &:not(:last-child) {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: '';
+      height: 12px;
+      width: 1px;
+      background-color: var(--grey);
+      display: inline-block;
+      margin-left: 10px;
+    }
+  }
+}
+
+.header__item-tel::before {
+  content: url('../../images/phone.svg');
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-right: 16px;
+}
+
+.header__list-login::before {
+  content: url('../../images/log-in.svg');
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  margin-right: 16px;
+}
+
+.header {
+  height: 80px;
+  background-color: var(--dark-grey);
+
+  @include media('max', 'tablet') {
+    display: none;
+  }
+}
+
+.logo {
+  width: 104px;
+  height: auto;
+}
+
+.header__nav {
+  color: var(--gray);
+  font-size: 14px;
+  text-transform: uppercase;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  gap: 32px;
+
+  @include media('max', 'tablet') {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  @include media('min', 'tablet') {
+    gap: 10px;
+  }
+}
+
+.header__nav-wrapper {
+  display: flex;
+  gap: 32px;
+  height: 100%;
+
+  @include media('min', 'tablet') {
+    gap: 10px;
+  }
+}
+
+.header__nav-item {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 100%;
+
+  @include media('min', 'tablet') {
+    padding: 0 10px;
+  }
+
+  &.active {
+    background-color: var(--grey-hover);
+  }
+
+  @include media('max', 'tablet') {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
+  }
+}
+
+.header__button {
+  cursor: pointer;
+
+  @include media('max', 'tablet') {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+}
+
+.header--mobile {
+  height: 82px;
+
+  @include media('min', 'tablet') {
+    display: none;
+  }
+}
+
+.container__header--mobile {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.close-button {
+  cursor: pointer;
+
+  .close-button-icon {
+    transition: all 250ms linear;
+  }
+
+  &.--is-open .close-button-icon {
+    margin-bottom: 0;
+
+    &:first-child {
+      transform: rotate(45deg);
+    }
+
+    &:nth-child(2) {
+      visibility: hidden;
+    }
+    &:last-child {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.close-button-icon {
+  display: block;
+
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
+
+.mobile-menu {
+  background-color: var(--black);
+  width: 100%;
+  position: fixed;
+  transition: all 250ms linear;
+
+  @include media('min', 'tablet') {
+    display: none;
+  }
+}
+
+.header__button-text {
+  color: var(--grey);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  margin-left: 16px;
+}
+
+.header__input {
+  width: 240px;
+  padding: 6px;
+  background-color: var(--light-grey);
+  border: none;
+  color: var(--gray);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  &::placeholder {
+    color: var(--grey);
+  }
+}
+
+.input-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+
+  &::before {
+    content: url('../../images/search.svg');
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+  }
+}
+
+.header__list--mobile {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 12px;
+}
+
+.header--mobile .header__item {
+  text-transform: none;
+  display: flex;
+}
