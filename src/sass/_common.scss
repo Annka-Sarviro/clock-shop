@@ -18,6 +18,10 @@
   @include media('min', 'desktop') {
     width: $desktop;
   }
+
+  @media screen and (min-width: 1720px) {
+    width: 1720px;
+  }
 }
 
 .section {
@@ -84,4 +88,80 @@
   line-height: 1.5;
   letter-spacing: 1.8px;
   text-transform: uppercase;
+}
+
+.card {
+  background-color: transparent;
+  width: fit-content;
+
+  &:last-child {
+    @media screen and (max-width: 1720px) {
+      display: none;
+    }
+  }
+
+  &:nth-child(2) {
+    @media screen and (max-width: 1280px) {
+      display: none;
+    }
+  }
+
+  &:hover .card__img {
+    filter: blur(2px);
+
+    & .card__name,
+    & .card_price {
+      visibility: hidden;
+    }
+  }
+  &:hover {
+    .card__link {
+      display: flex;
+      position: absolute;
+      width: max-content;
+      z-index: 2;
+      top: 50%;
+      right: 50%;
+      transform: translateX(50%) translateY(-50%);
+    }
+  }
+
+  .img-wraper {
+    padding: 27px 20px 34px 20px;
+    background-color: var(--card-bg);
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    position: relative;
+  }
+  .card__img {
+    width: 215px;
+    height: 264px;
+    transition: all 250ms linear;
+  }
+  .card__name {
+    color: var(--white);
+    font-family: Playfair Display;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 10px;
+  }
+
+  .card_price {
+    color: var(--light-grey);
+    font-family: Playfair Display;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .card__link {
+    display: none;
+  }
 }

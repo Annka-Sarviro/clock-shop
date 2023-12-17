@@ -1,0 +1,138 @@
+.newseason__section {
+  @include media('max', 'tablet') {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.newseason__container {
+  padding-bottom: 60px;
+  padding-top: 60px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  height: 100%;
+
+  @media screen and (min-width: 480px) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  @include media('min', 'tablet') {
+    padding-bottom: 60px;
+    padding-top: 60px;
+
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include media('min', 'desktop') {
+    font-size: 36px;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    width: calc(($desktop - 30px) / 2);
+  }
+
+  @media screen and (min-width: 1720px) {
+    width: 845px;
+
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+.newseason__section--image {
+  background-image: url('../images/newcollection/newcollection-mobile-1x.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .section__newcollection {
+    background-image: url('../images/newcollection/newcollection-mobile-2x.jpg');
+  }
+}
+@supports (background-image: url('../images/newcollection/newcollection-mobile-1x.webp')) {
+  .section__newcollection {
+    background-image: url('../images/newcollection/newcollection-mobile-1x.webp');
+  }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .section__newcollection {
+      background-image: url('../images/newcollection/newcollection-mobile-2x.webp');
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section__newcollection {
+    background-image: url('../images/newcollection/newcollection-tablet-1x.jpg');
+  }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .section__newcollection {
+      background-image: url('../images/newcollection/newcollection-tablet-2x.jpg');
+    }
+  }
+
+  @supports (background-image: url('../images/newcollection/newcollection-tablet-1x.webp')) {
+    .section__newcollection {
+    }
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .section__newcollection {
+        background-image: url('../images/newcollection/newcollection-tablet-2x.webp');
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .section__newcollection {
+    background-image: url('../images/newcollection/newcollection-desktop-1x.jpg');
+  }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .section__newcollection {
+      background-image: url('../images/newcollection/newcollection-desktop-2x.jpg');
+    }
+  }
+  @supports (background-image: url('../images/newcollection/newcollection-desktop-1x.webp')) {
+    .section__newcollection {
+      background-image: url('../images/newcollection/newcollection-desktop-1x.webp');
+    }
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .section__newcollection {
+        background-image: url('../images/newcollection/newcollection-desktop-2x.webp');
+      }
+    }
+  }
+}
+
+.newseason__container--gallery {
+  @include media('max', 'desktop') {
+    margin-right: auto;
+    padding-right: 32px;
+  }
+  margin-left: auto;
+  padding-right: 0;
+}
+
+.newseason__container--img {
+  @include media('max', 'tablet') {
+    height: 700px;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.newseason__button {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.newseason__gallery {
+  display: flex;
+  justify-content: space-between;
+}

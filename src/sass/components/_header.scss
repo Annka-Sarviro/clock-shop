@@ -53,7 +53,7 @@
 }
 
 .header__item-tel::before {
-  content: url('../../images/phone.svg');
+  content: url('../images/phone.svg');
   width: 16px;
   height: 16px;
   display: inline-block;
@@ -61,7 +61,7 @@
 }
 
 .header__list-login::before {
-  content: url('../../images/log-in.svg');
+  content: url('../images/log-in.svg');
   width: 14px;
   height: 14px;
   display: inline-block;
@@ -230,7 +230,7 @@
   gap: 18px;
 
   &::before {
-    content: url('../../images/search.svg');
+    content: url('../images/search.svg');
     width: 22px;
     height: 22px;
     display: inline-block;
