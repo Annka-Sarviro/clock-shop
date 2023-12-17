@@ -108,21 +108,14 @@
 
   &:hover .card__img {
     filter: blur(2px);
-
-    & .card__name,
-    & .card_price {
-      visibility: hidden;
-    }
   }
   &:hover {
     .card__link {
-      display: flex;
-      position: absolute;
-      width: max-content;
-      z-index: 2;
-      top: 50%;
-      right: 50%;
-      transform: translateX(50%) translateY(-50%);
+      opacity: 1;
+    }
+    .card__name,
+    .card__price {
+      opacity: 0;
     }
   }
 
@@ -141,6 +134,7 @@
     width: 215px;
     height: 264px;
     transition: all 250ms linear;
+    opacity: 1;
   }
   .card__name {
     color: var(--white);
@@ -150,18 +144,29 @@
     font-weight: 400;
     line-height: normal;
     margin-bottom: 10px;
+    transition: opacity 250ms linear;
+    opacity: 1;
   }
 
-  .card_price {
+  .card__price {
     color: var(--light-grey);
     font-family: Playfair Display;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    transition: opacity 250ms linear;
   }
 
   .card__link {
-    display: none;
+    opacity: 0;
+    display: flex;
+    position: absolute;
+    width: max-content;
+    z-index: 2;
+    top: 50%;
+    right: 50%;
+    transform: translateX(50%) translateY(-50%);
+    transition: opacity 300ms linear;
   }
 }
