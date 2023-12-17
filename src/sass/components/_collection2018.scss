@@ -32,19 +32,19 @@
 }
 
 .collection2018__section {
-  background-image: url('./images/collection2018/collection2018-mobile-1x.jpg');
+  background-image: url('../images/collection2018/collection2018-mobile-1x.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
 
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    background-image: url('./images/collection2018/collection2018-mobile-2x.jpg');
+    background-image: url('../images/collection2018/collection2018-mobile-2x.jpg');
   }
-  @supports (background-image: url('./images/collection2018/collection2018-mobile-1x.webp')) {
-    background-image: url('./images/collection2018/collection2018-mobile-1x.webp');
+  @supports (background-image: url('../images/collection2018/collection2018-mobile-1x.webp')) {
+    background-image: url('../images/collection2018/collection2018-mobile-1x.webp');
 
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url('./images/collection2018/collection2018-mobile-2x.webp');
+      background-image: url('../images/collection2018/collection2018-mobile-2x.webp');
     }
   }
 }
@@ -52,24 +52,24 @@
 @media screen and (min-width: 768px) {
   .collection2018__section {
     background-position: top right calc(50vw);
-    background-image: url('./images/collection2018/collection2018-tablet-1x.jpg');
+    background-image: url('../images/collection2018/collection2018-tablet-1x.jpg');
   }
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     .collection2018__section {
       background-position: top right calc(50vw);
-      background-image: url('./images/collection2018/collection2018-tablet-2x.jpg');
+      background-image: url('../images/collection2018/collection2018-tablet-2x.jpg');
     }
   }
 
-  @supports (background-image: url('./images/collection2018/collection2018-tablet-1x.webp')) {
+  @supports (background-image: url('../images/collection2018/collection2018-tablet-1x.webp')) {
     .collection2018__section {
       background-position: top right calc(50vw);
-      background-image: url('./images/collection2018/collection2018-tablet-1x.webp');
+      background-image: url('../images/collection2018/collection2018-tablet-1x.webp');
     }
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       .collection2018__section {
         background-position: top right calc(50vw);
-        background-image: url('./images/collection2018/collection2018-tablet-2x.webp');
+        background-image: url('../images/collection2018/collection2018-tablet-2x.webp');
       }
     }
   }
@@ -77,20 +77,20 @@
 
 @media screen and (min-width: 1280px) {
   .collection2018__section {
-    background-image: url('./images/collection2018/collection2018-desktop-1x.jpg');
+    background-image: url('../images/collection2018/collection2018-desktop-1x.jpg');
   }
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     .collection2018__section {
-      background-image: url('./images/collection2018/collection2018-desktop-2x.jpg');
+      background-image: url('../images/collection2018/collection2018-desktop-2x.jpg');
     }
   }
   @supports (background-image: url('./images/collection2018/collection2018-desktop-1x.webp')) {
     .collection2018__section {
-      background-image: url('./images/collection2018/collection2018-desktop-1x.webp');
+      background-image: url('../images/collection2018/collection2018-desktop-1x.webp');
     }
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       .collection2018__section {
-        background-image: url('./images/collection2018/collection2018-desktop-2x.webp');
+        background-image: url('../images/collection2018/collection2018-desktop-2x.webp');
       }
     }
   }
