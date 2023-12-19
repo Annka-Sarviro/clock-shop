@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./favicon-16x16.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ClockShop</title>
   </head>
@@ -22,6 +24,47 @@
     <include src="./partials/footer.html"></include>
 
     <script src="./main.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper1 = new Swiper('.swiper1', {
+        autoplay: {
+          delay: 5000,
+        },
+        slideClass: 'swiper-slide-1',
+        wrapperClass: 'wrapper-1',
+        pagination: {
+          el: '.swiper-pagination-1',
+        },
+      });
+    </script>
+
+    <script>
+      const swiper2 = new Swiper('.swiper2', {
+        autoplay: {
+          delay: 5000,
+        },
+        slidesPerView: 1,
+        breakpoints: {
+          768: {
+            slidesPerView: 1,
+          },
+
+          1280: {
+            slidesPerView: 2,
+          },
+          1780: {
+            slidesPerView: 3,
+          },
+        },
+        slideClass: 'swiper-slide-2',
+        wrapperClass: 'wrapper-2',
+        pagination: {
+          el: '.swiper-pagination-2',
+          dynamicBullets: true,
+        },
+      });
+    </script>
+
     <script src="./js/close-modal.js" type="module"></script>
   </body>
 </html>

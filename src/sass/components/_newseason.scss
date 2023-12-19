@@ -1,28 +1,23 @@
 .newseason__section {
-  @include media('max', 'tablet') {
-    display: flex;
-    flex-direction: column;
+  @include media('min', 'tablet') {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
-  display: grid;
-  grid-template-columns: 1fr 1fr;
 }
 
 .newseason__container {
+  margin: 0 auto;
   padding-bottom: 60px;
   padding-top: 60px;
   padding-right: 20px;
   padding-left: 20px;
-
-  height: 100%;
-
+  height: auto;
   @media screen and (min-width: 480px) {
-    padding-left: 32px;
-    padding-right: 32px;
+    width: 480px;
   }
   @include media('min', 'tablet') {
-    padding-bottom: 60px;
-    padding-top: 60px;
-
+    width: $tablet;
+    width: calc(($tablet - 32px) / 2);
     padding-left: 32px;
     padding-right: 32px;
   }
@@ -31,14 +26,12 @@
     font-size: 36px;
     padding-bottom: 100px;
     padding-top: 100px;
+
     width: calc(($desktop - 30px) / 2);
   }
 
   @media screen and (min-width: 1720px) {
-    width: 845px;
-
-    padding-left: 32px;
-    padding-right: 32px;
+    width: calc((1720px - 30px) / 2);
   }
 }
 
@@ -108,22 +101,23 @@
 }
 
 .newseason__container--gallery {
-  @include media('max', 'desktop') {
-    margin-right: auto;
-    padding-right: 32px;
+  position: relative;
+  @include media('min', 'tablet') {
+    margin-left: auto;
+    margin-right: 0;
   }
-  margin-left: auto;
-  padding-right: 32px;
 }
 
 .newseason__container--img {
-  @include media('max', 'tablet') {
-    height: 700px;
-  }
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  min-height: 600px;
+  @include media('min', 'tablet') {
+    margin-right: auto;
+    margin-left: 0;
+  }
 }
 
 .newseason__button {

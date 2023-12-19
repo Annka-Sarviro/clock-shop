@@ -1,3 +1,12 @@
+.header__section {
+  background-color: black;
+  @include media('max', 'tablet') {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+  }
+}
+
 .container__header {
   display: flex;
   justify-content: space-between;
@@ -193,6 +202,8 @@
   width: 100%;
   position: fixed;
   transition: all 250ms linear;
+  z-index: 99;
+  position: fixed;
 
   @include media('min', 'tablet') {
     display: none;
