@@ -11,7 +11,6 @@
     openMenuBtn.classList.toggle('--is-open');
 
     document.body.classList.toggle('modal-open');
-    // closeMenuBtn.classList.toggle('visually-hidden');
   };
   openMenuBtn.addEventListener('click', toggleMenu);
   closeMenuBtn.addEventListener('click', toggleMenu);
