@@ -1,0 +1,31 @@
+.partners__wraper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: max-content;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+
+  @include media('min', 'desktop') {
+    gap: 30px;
+  }
+  @media screen and (min-width: 1720px) {
+    gap: 30px;
+  }
+}
+
+.partners__img {
+  width: 150px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include media('min', 'desktop') {
+    width: 280px;
+  }
+
+  @media screen and (min-width: 1720px) {
+    width: 100%;
+  }
+}
