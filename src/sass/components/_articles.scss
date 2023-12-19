@@ -1,5 +1,6 @@
 .articles__section {
   background-color: var(--dark-grey);
+  position: relative;
 }
 
 .articles__container {
@@ -54,8 +55,6 @@
 }
 
 .articles__list {
-  display: flex;
-  flex-direction: column;
   row-gap: 35px;
 }
 

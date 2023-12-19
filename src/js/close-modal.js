@@ -9,6 +9,8 @@
     openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
     mobileMenu.classList.toggle('visually-hidden');
     openMenuBtn.classList.toggle('--is-open');
+
+    document.body.classList.toggle('modal-open');
     // closeMenuBtn.classList.toggle('visually-hidden');
   };
   openMenuBtn.addEventListener('click', toggleMenu);
