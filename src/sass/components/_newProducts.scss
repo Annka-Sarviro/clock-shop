@@ -3,12 +3,18 @@
   flex-wrap: wrap;
   gap: 30px;
   justify-content: flex-start;
+  margin-bottom: 32px;
 
   @include media('min', 'tablet') {
-    column-gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 0;
   }
   @include media('min', 'desktop') {
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 58px;
+    row-gap: 20px;
   }
   @media screen and (min-width: 1720px) {
     column-gap: 92px;
@@ -16,8 +22,23 @@
 }
 
 .newProducts_card {
+  transition: all 2000ms linear;
   @include media('max', 'tablet') {
     margin: 0 auto;
+  }
+
+  &.not-shown {
+    @include media('max', 'tablet') {
+      position: absolute;
+      clip: rect(0 0 0 0);
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
   }
 
   & .img-wraper {
@@ -34,5 +55,12 @@
     @media screen and (mi-width: 1720px) {
       padding: 27px 30px 34px 30px;
     }
+  }
+}
+
+.newProduct__button {
+  margin: 0 auto;
+  @include media('min', 'tablet') {
+    display: none;
   }
 }
