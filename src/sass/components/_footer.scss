@@ -1,0 +1,28 @@
+.footer {
+  background-color: var(--dark-grey);
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 10px;
+
+  color: var(--light-grey);
+  font-size: 12px;
+
+  @include media('min', 'tablet') {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    row-gap: 0px;
+    text-align: left;
+  }
+
+  & a {
+    text-decoration-line: underline;
+    text-underline-offset: 4px;
+  }
+}
