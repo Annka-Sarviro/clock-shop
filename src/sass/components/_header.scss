@@ -4,6 +4,7 @@
     position: fixed;
     top: 0;
     width: 100vw;
+    z-index: 10;
   }
 }
 
@@ -202,7 +203,6 @@
   width: 100%;
   position: fixed;
   transition: all 250ms linear;
-  z-index: 99;
   position: fixed;
 
   @include media('min', 'tablet') {

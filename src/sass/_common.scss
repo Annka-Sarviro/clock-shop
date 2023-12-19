@@ -172,6 +172,9 @@
 
 .swiper-slide-1 {
   height: 526px;
+  @include media('min', 'desktop') {
+    height: 452px;
+  }
 }
 .swiper-pagination-bullet {
   background-color: var(--light-grey);
