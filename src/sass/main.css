@@ -950,17 +950,22 @@ button {
   flex-wrap: wrap;
   gap: 30px;
   justify-content: flex-start;
+  margin-bottom: 32px;
 }
 @media screen and (min-width: 768px) {
   .newProducts__gallery {
-    -moz-column-gap: 10px;
-         column-gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1280px) {
   .newProducts__gallery {
+    grid-template-columns: repeat(4, 1fr);
     -moz-column-gap: 58px;
          column-gap: 58px;
+    row-gap: 20px;
   }
 }
 @media screen and (min-width: 1720px) {
@@ -970,9 +975,25 @@ button {
   }
 }
 
+.newProducts_card {
+  transition: all 2000ms linear;
+}
 @media screen and (max-width: 767px) {
   .newProducts_card {
     margin: 0 auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .newProducts_card.not-shown {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    overflow: hidden;
+    pointer-events: none;
   }
 }
 .newProducts_card .img-wraper {
@@ -991,6 +1012,15 @@ button {
 @media screen and (mi-width: 1720px) {
   .newProducts_card .img-wraper {
     padding: 27px 30px 34px 30px;
+  }
+}
+
+.newProduct__button {
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .newProduct__button {
+    display: none;
   }
 }
 
