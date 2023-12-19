@@ -21,7 +21,7 @@ Dillinger uses a number of open source projects to work properly:
 
 And of course Dillinger itself is open source with a [clock shop](https://github.com/Annka-Sarviro/clock-shop) on GitHub.
 
-[![HeroPage](src/images/preview2)](src/images/preview2)
+[![HeroPage](src/images/preview2.png)](src/images/preview2.png)
 
 ## Installation
 
